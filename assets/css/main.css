@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   /* background-size: 100% %; */
   background-position-y: -3rem;
-  
+
   margin: 0 0 0;
   /* height: 850px; */
 }
@@ -19,7 +19,7 @@
 .subtitle {
   color: gray;
 }
-.title h1{
+.title h1 {
   font-size: 45px;
 }
 #home {
@@ -84,12 +84,12 @@ td.col3 {
   left: 180px;
 }
 .buttonPromot {
-  
   position: relative;
-  bottotext-align: center;
+  text-align: center;
   width: 100px;
   height: 30px;
-  box-shadow: 4px 3px black;m: 20px;
+  box-shadow: 4px 3px black;
+  bottom: 20px;
   right: 90px;
 }
 #couponImg {
@@ -111,7 +111,7 @@ td.col3 {
   left: 310px;
   bottom: 30px;
 }
-.gift{
+.gift {
   position: relative;
   right: 75px;
   bottom: 10px;
@@ -120,55 +120,97 @@ td.col3 {
   position: relative;
   right: 50px;
 } */
-.description{
+.description {
   color: white;
   position: relative;
   top: 35px;
   left: 10px;
 }
-.product{
+.product {
   position: relative;
   top: 40px;
 }
-.productCate {
- list-style: none;
+.productCate ul{
+  position: relative;
+  bottom: 210px;
+
 }
-.productCate a{
+.productCate li {
+  list-style: none;
+  padding-bottom: 30px;
+}
+.productCate a {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
   color: black;
   padding-left: 40px;
-
 }
-.productCate li{
-  padding-bottom: 20px;
-}
-.proIcon{
-  width: 20%;
+.proIcon {
+  width: 25%;
   vertical-align: middle;
 }
-.proDesciption{
-  border: black solid 1px;
-  width: 10%;
+.productFeature {
+  border-spacing: 50px;
+  background-color: rgba(220,220,220, 0.2);
+  background-size: 100% 100%;
 }
-.proDesciption img{
-  height: 70%;
+.proDesciption {
+  border: black solid 3px;
+  width: 250px;
+  height: 370px;
+  padding-left: 10px;
+  padding-right: 15;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  
 }
-.productFeature{
-  border-spacing: 20px;
+.proDesciption p{
+  margin-top: 0px;
+}
+.proDesciption img {
+  width: 50%;
+  position: relative;
+  left: 50px;
+}
+.proDesciption button {
+  text-align: center;
+  width: 70px;
+  height: 30px;
+  box-shadow: 4px 3px black;
+  background-color: white;
+  float: right;
+  margin-right: 20px;
+  /* position: relative;
+  left: 200px;
+  bottom: 20px; */
+  
+}
+.oldprice,.lastprice{
+  position: relative;
+  top: 45px;
+
 }
 .oldprice{
   text-decoration-line: line-through;
   color: red;
+  font-weight: bold;
 }
 .lastprice{
   color: green;
+  font-weight: bold;
 }
-.proDesciption button{
-  text-align: center;
-  width: 90px;
-  height: 30px;
-  box-shadow: 4px 3px black;
-  background-color: white;
+
+
+.discount{
+  background-color: orange ;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 0;
+  width: 10%;
+  height: 15px;
+  float: right;
+  font-weight: bold;
+  margin-right: 20px;
+  
 }
