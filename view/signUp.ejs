@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/signup.css">
+    <<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container pt-5 mt-5" style="width: 40%;">
+        <h1 id="welcome" class="welcomeMessage">Welcome to Awesome shop</h3>
+        <p id="question" class="welcomeMessage">Don't have an accont? Create your own account, it takes less than a minute</p>
+        <!-- <form class="form-control" name="register" action="http://localhost:3000/register" method="POST">
+            <label for="username">Username</label> <br>
+            <input type="text" name="username"><br>
+            <label for="email">Email</label> <br>
+            <input type="email" name="email"><br>
+            <label for="pwd">Password</label> <br>
+            <input type="password" name="pwd"><br>
+            <label for="confirm_pwd">Confirm Password</label><br>
+            <input type="password" name="confirm_pwd"><br>
+            <p id="error_message" style="color: red;"></p>
+            <button id="submit" type="button" onclick="validatePwd(event)">Submit</button>
+    
+        </form> -->
+        <form name="register" action="http://localhost:3000/register" method="POST">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label> <br>
+                <input type="text" class="form-control" name="username" id="username"<br>
+            </div>
+            <div class="mb-3">
+              <label for="email1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+              <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" name="pwd">
+            </div>
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" name="confirm_pwd">
+              </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="checkCondition">
+              <label class="form-check-label" for="checkCondition">I accept terms and Conditions</label>
+            </div>
+            <button id="submit" type="button" onclick="validatePwd(event)" class="btn btn-primary">Sign Up</button>
+            <p id="error_message" style="color: red;"></p>
+          </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../assets/js/validation.js"></script>
+</body>
+<!-- <script src="./assets/js/validation.js"></script> -->
+
+</html>
+
