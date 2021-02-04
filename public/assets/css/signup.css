@@ -8,3 +8,7 @@
 #submit{
     width: 100%;
 }
+.error_message{
+    color: red;
+    float: right;
+}
