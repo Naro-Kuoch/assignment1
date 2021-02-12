@@ -32,7 +32,9 @@
             </div>
             <div class="mb-3">
               <label for="password" class="form-label">Password</label>
-              <span id="checkPwd" class="error_message"></span>
+              <% if(error) { %> 
+                  <span class="error" style="color: red;float: right;"> <%=message %> </span>
+              <% } %> 
               <input type="password" class="form-control" id="password" name="pwd">
             </div>
         

@@ -2,10 +2,175 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>        
+
 </head>
+<style>
+  .addProduct{
+      float: right;
+  }
+  .addProduct{
+      margin-right: 5%;
+  }
+  .text{
+      margin-left: 5%;
+  }
+  .link{
+    float: right;
+    margin-right:5%;
+  }
+  .awesome{
+    margin-left: 5% ;
+  }
+  .topside{
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+</style>
 <body>
-    Admin page
+    
+ <div class="topside"><span class="awesome">Awesome Shop | Admin Pannel</span> <span class="link"><a href="">Home</a> | <a href="">Log Out</a></span></div> 
+
+    <div class="row">
+        <div class="col-3">
+          <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
+            <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
+            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+              <div class="card">
+                <div class="row mt-3">
+                    <div class="col-6 ">
+                       <p class="text">All Products in stock</p> 
+                    </div>
+                    <div class="col-6 ">
+                        <!-- <button class="addProduct btn btn-primary"> Add Product </button> -->
+                        <!-- Button trigger modal -->
+                        <button type="button" class="addProduct btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          Add Product
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                            <form method="POST" action="http://localhost:3000/addproduct" enctype="multipart/form-data">
+                              <div class="modal-body">
+                                
+                                    <div class="form-group">
+                                      <label for="productname">Product name</label>
+                                      <input type="text" class="form-control" id="productName" name="productName" placeholder="Product name">
+                            
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label for="qty">Quantity</label>
+                                      <input type="number" class="form-control" id="qty" placeholder="Quantity" name="qty">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="detail">Detail</label>
+                                        <input type="text" class="form-control" id="detail" placeholder="Product detail" name="detail">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="instock">Instock Date</label>
+                                        <input type="date" class="form-control" id="instock" placeholder="Instock Date" name="instock">
+                                    </div>
+                                    <label for="Category">Category</label>
+                                    <select class="form-select" aria-label="Default select example" id="category" name="category">
+                                        <option selected value="electronic">Electronics</option>
+                                        <option value="bag">Bags</option>
+                                        <option value="wallet">Wallets</option>
+                                        <option value="clothes">Clothes</option>
+                                    </select>
+                                    <label for="productImg" class="form-label">Product's image</label>
+                                    <input class="form-control" type="file" id="productImg" name="productimg" />
+    
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Add Product</button>
+                              </div>
+
+                            </form>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col-2">#</th>
+                            <th scope="col-2">Name</th>
+                            <th scope="col-1">Qty</th>
+                            <th scope="col-2">Detail</th>
+                            <th scope="col-2">Instock At</th>
+                            <th scope="col-1">Category</th>
+                            <th scope="col-2">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                         
+                          </tr>
+                          <!-- <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr> -->
+                        </tbody>
+                      </table>
+                </div>
+              </div>
+
+            </div>
+            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">hi</div>
+            <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">what?</div>
+            <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">hehe</div>
+          </div>
+        </div>
+      </div>
+
+
+
 </body>
 </html>

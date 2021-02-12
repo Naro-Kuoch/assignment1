@@ -1,13 +1,18 @@
-async function validatePwd(event) {
+
+function validatePwd(event) {
     event.preventDefault();
     var register=document.forms["register"];
     var pwd = register["pwd"].value;
     var conPwd = register["confirm_pwd"].value; 
     var email = register["email"].value;
 
-    var passowrd = document.getElementById("checkPwd")
-    var confirmPwd = document.getElementById("checkConfirmPwd")
-    var exist= false;
+    var checkEmail = document.getElementById("douplicate_email");
+    var passowrd = document.getElementById("checkPwd");
+    var confirmPwd = document.getElementById("checkConfirmPwd");
+    // var exist= false;
+    var username = register["username"].value;
+    console.log(username,email,pwd);
+    
 
     // await axios.post('/searchemail',{email:email}).then(result=>{
 
@@ -16,7 +21,7 @@ async function validatePwd(event) {
     // })
     // console.log(exist)
     // if(exist){
-    //   error.innerHTML="Email already exists !";
+    //   checkEmail.innerHTML="Email already exists !";
     // }
     if (pwd != conPwd) {
       confirmPwd.innerHTML="Password dosn't match !";  
@@ -28,6 +33,17 @@ async function validatePwd(event) {
       passowrd.innerHTML="It requires at least 3 characters !";
     }
     else{
-    window.location.pathname="/signin";
+      console.log(email,pwd,username)
+      axios.post("/register",{username:username,pwd:pwd,email:email}).then(result=>{
+        if(result.data.email){
+          checkEmail.innerHTML="Email already exists !";
+          console.log("email already exist")
+        }
+  
+       else{
+          window.location.pathname="/signin";
+          console.log("logIn");
+        }
+      })
   }
   }

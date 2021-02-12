@@ -18,5 +18,5 @@ const userShema = new Schema({
         type: Date,
         required: true
     }
-}, {collation:'users'});
+}, {collection:'users'});
 module.exports= mongoose.model('User', userShema);
