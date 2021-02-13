@@ -13,9 +13,7 @@ exports.signIn = (req,res)=>{
 exports.product = (req,res)=>{
     res.render('product');
 }
-exports.manageProduct = (req,res)=>{
-    res.render('adminPage');
-}
+
 exports.register = (req,res)=>{
     console.log(req.body);
     const username = req.body.username;
@@ -53,7 +51,7 @@ exports.logIn = (req,res) =>{
         if(result){
             bcrypt.compare(pwd,result[0].password,function(err,passwordIsMatch){
                 if(passwordIsMatch){
-                    res.redirect("/admin");
+                    res.redirect("/product");
                 }else{
                     res.render("signin", {error: true,  message: "Incorrect password !"});
                 }

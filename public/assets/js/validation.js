@@ -34,16 +34,19 @@ function validatePwd(event) {
     }
     else{
       console.log(email,pwd,username)
-      axios.post("/register",{username:username,pwd:pwd,email:email}).then(result=>{
+      axios.post("http://localhost:3000/register",{username:username,pwd:pwd,email:email}).then(result=>{
         if(result.data.email){
           checkEmail.innerHTML="Email already exists !";
           console.log("email already exist")
         }
-  
        else{
           window.location.pathname="/signin";
-          console.log("logIn");
+          console.log("hello error!");
         }
       })
   }
   }
+// function validateProductName(event){
+//   event.preventDefault();
+//   var productName = document.getElementById("productName");
+// }

@@ -9,10 +9,11 @@ router.get('/signin',control.signIn);
 router.get('/product',control.product);
 router.post('/register',control.register);
 router.post('/logIn',control.logIn);
-router.get('/admin',control.manageProduct);
-router.post('/searchemail',control.searchEmail)
+router.get('/admin',controlPro.manageProduct);
+router.post('/searchemail',control.searchEmail);
 
 router.post('/addproduct',controlPro.addProduct);
-router.get('/getproduct',controlPro.getproduct);
+router.post('/deleteProduct',controlPro.deleteProduct);
+
 
 module.exports=router

@@ -81,6 +81,7 @@
                                 
                                     <div class="form-group">
                                       <label for="productname">Product name</label>
+                                      <!-- <span id="errorMessage" style="color: red; float: right;"></span> -->
                                       <input type="text" class="form-control" id="productName" name="productName" placeholder="Product name">
                             
                                     </div>
@@ -135,16 +136,22 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                         
-                          </tr>
+                          <% for(var i=0; i< result.length; i++) {%> 
+                            <tr>
+                              <th scope="row"><img src="<%= result[i].img %>" width="100" alt=""></th>
+                              <td><%= result[i].productName %></td>
+                              <td><%= result[i].qty %></td>
+                              <td><%= result[i].detail %></td>
+                              <td><%= result[i].instock.toDateString() %></td>
+                              <td><%= result[i].category %></td>
+                              <td>
+                                  <form action="/product/<%= result[i]._id %>" method="POST">
+                                  <button class="btn btn-danger" type="submit" value="<%= result[i]._id %>">Delete</button>
+                                  </form>
+                              </td>
+                           
+                            </tr>
+                            <% } %>
                           <!-- <tr>
                             <th scope="row">2</th>
                             <td>Jacob</td>
@@ -171,6 +178,6 @@
       </div>
 
 
-
+      <script src="../assets/js/validation.js"></script>
 </body>
 </html>

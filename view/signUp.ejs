@@ -14,7 +14,7 @@
     <div class="container pt-5 mt-5 mb-3" style="width: 40%;">
         <h1 id="welcome" class="welcomeMessage">Welcome to Awesome shop</h3>
         <p id="question" class="welcomeMessage">Don't have an accont? Create your own account, it takes less than a minute</p>
-        <form name="register" action="http://localhost:3000/register" method="POST" >
+        <form name="register" action="http://localhost:3000/register" method="POST" onsubmit="validatePwd(event)" >
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label> <br>
                 <input type="text" class="form-control" name="username" id="username"<br>
@@ -39,7 +39,7 @@
               <input type="checkbox"   class="form-check-input" id="checkCondition" required>
               <label class="form-check-label" for="checkCondition">I accept terms and Conditions</label>
             </div>
-            <button id="submit" type="submit" onclick="validatePwd(event)" class="btn btn-primary mb-5 mb-3">Sign Up</button>
+            <button id="submit" type="submit" class="btn btn-primary mb-5 mb-3">Sign Up</button>
             <!-- <p id="error_message" style="color: red;"></p> -->
           </form>
 

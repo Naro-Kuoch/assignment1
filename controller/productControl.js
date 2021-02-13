@@ -1,5 +1,22 @@
 const Product = require('../model/product');
 const fs = require('fs');
+
+// exports.manageProduct = (req,res)=>{
+//     res.render('adminPage');
+// }
+
+exports.manageProduct=async(req,res)=>{
+    await Product.find().then(result=>{
+        if(result){
+            console.log(result);
+            res.render('adminPage',{error:false,result:result});
+
+        }else{
+            res.render('adminPage',{error:false,result:false});
+        }
+    })
+    
+}
 exports.addProduct = (req,res)=>{
     console.log(req.body);
     const productName = req.body.productName;
@@ -18,7 +35,7 @@ exports.addProduct = (req,res)=>{
     }
     Product.findOne({productName: productName}).then(result=>{
         if(result){
-            console.log("already exist !")
+            res.redirect('/admin')
         }
         else{
             img.mv(productFile).then(result=>{
@@ -42,23 +59,34 @@ exports.addProduct = (req,res)=>{
     })
 
 }
-exports.getproduct = (req,res)=>{
-    product.find().then( products =>{
-        console.log(products);
-        res.json(products);
-    }).catch(err=>{
-        console.log(err);
-    })
-}
+// exports.getproduct = (req,res)=>{
+//     product.find().then( products =>{
+//         console.log(products);
+//         res.json(products);
+//     }).catch(err=>{
+//         console.log(err);
+//     })
+// }
 
-exports.deleteProduct = (req, res) => {
-    const productid = req.params.postId;
-    Post.findByIdAndRemove(postId)
-        .then(() => {
-          console.log('Post is deleted');
-          res.json({"message": "success!"});
-        })
-        .catch(err => {
-          console.log(err);
-        })
-  }
+// exports.deleteProduct = (req, res) => {
+//     const productid = req.params.postId;
+//     Post.findByIdAndRemove(postId)
+//         .then(() => {
+//           console.log('Post is deleted');
+//           res.json({"message": "success!"});
+//         })
+//         .catch(err => {
+//           console.log(err);
+//         })
+//   }
+exports.deleteProduct = (req,res)=>{
+    const path="./public"
+    console.log(req.params.id)
+    Product.findByIdAndRemove(req.params.id).then(result=>{
+        fs.unlink(path+result.img);
+        res.redirect("/admin")
+    }).catch(err=>{
+        res.redirect("/admin")
+    })
+
+}
