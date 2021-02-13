@@ -3,192 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product detail</title>
-    <!-- <link rel="stylesheet" href="../assets/css/main.css"> -->
+    <title>Product Detail</title>
     <link rel="stylesheet" href="../assets/css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/proDetail.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
 </head>
 <body>
-    <div class="background">
-        <div class="nav">
-            <a href="" id="home"><b>Awesome<span id="head">Shop</span></b></a>
-            <span class="helpJoin">
-                <button id="join">Join</button>
-                <a href="" id="help">
-                    <i class="fa fa-question-circle"></i>
-                     Need Help
-                </a>
+
+    <div class="back-ground">
+        <!-- sidebar -->
+        <div class="side-bar">
+            <a href="../src/index.html" class="logo" >Awesome<span class="shop">Shop</span></a>
+            <span class="right-path">
+                <a href="" class="help"><i class="fas fa-question-circle"></i>&nbsp;Need Help</a>
+                <button class="join">join</button>
             </span>
-            
         </div>
-       
-        <center class="title">
-            <h1>Shop your designer dresses</h1>
-            <p class="subtitle">
-                Ready to wear your dresses tailored for you from online. Hurry up while stock lasts.
-            </p>
-            <input type="search" id="searchProduct" name="searchProduct" placeholder="&#xf002 Search your products from here">
-
-        </center>
-
+        <!-- Feature Section -->
+        <div >
+            <center><h1>Shop your designer dresses</h1></center>
+            <center><p class="text">Ready to wear dresses tailored for you from online. Hurry up while stock lasts.</p></center>
+            <div class="search-bar">
+            <!-- Search bar -->
+            <center><input class="input" type="text" placeholder="&#xF002; Search your products from here"/></center>
+           
+            </div>
+        
+        </div>
     </div>
-    <div class="promotion">
-        <table class="promotion">
-            <tr>
-                <td class="col1"> 
-                    <div class="description">
-                        <h3>Coupon Savings</h3>
-                        <p>Up to 60% off everyday essentials</p>
-                    </div>
-                   
-                   <img id="couponImg" src="../assets/image/icons8-coupon-100.png" alt="Scissors"> 
-                   <button class="buttonPromot">Shop Coupon</button>
-                </td>
-                <td class="col2">
-                    <div class="description">
-                        <h3>Free Delivery</h3>
-                        <p>With selected items</p>
-                    </div>
-                    <img id="deliverImg" src="../assets/image/checked-truck.png" alt="Truck">
-                    <button class="buttonPromot">Deliver Now</button> 
-                </td>
-                <td class="col3">
-                    <div class="description">
-                        <h3>Gift Voucher</h3>
-                        <p>With personal care items</p>
-                    </div>
-                    <img id="giftImg" src="../assets/image/gift--v1.png" alt="Gift"> 
-                    <button class="buttonPromot gift">Gift Now</button>
-                </td>
-            </tr>
-        </table>
+    <!-- Promotion Section-->
+    <div class="grid">
+        <div class="item1">
+            <div class="inner"> 
+                <h4>Coupon Saving</h4>
+                <p>Up to 60% off everyday essentials</p>
+                <button class="btn">Shop Coupons</button>
+            </div>
+            <img class="image" src="../assets/image/icons8-coupon-100.png" alt="">
+        </div>
+        <div class="item2">
+            <div class="inner">
+                <h4>Free Delivery</h4>
+                <p>With selected items</p>
+                <button class="btn">Deliver Now</button>
+            </div>
+            <img class="image" src="../assets/image/checked-truck.png" alt="">
+        </div>
+        <div class="item3">
+            <div class="inner">
+                <h4>Gift Voucher</h4>
+                <p>With personal care items</p>
+                <button class="btn">Gift Now</button>
+            </div>
+            <img class="image" src="../assets/image/gift--v1.png" alt="">
+        </div>
     </div>
-    <div>
-        <table class="product">
-            <tr>
-                <td class="productCate">
-                    <ul >
-                        <li >
-                            <a href=""> 
-                                <img class="proIcon" src="../assets/image/icon_laptop.png" alt="Laptop">
-                                Electronic
-                            </a>
-                        </li>
-                        <li >
-                            <a href="">
-                                <img class="proIcon" src="../assets/image/icon_bag-front-view.png" alt="bag">
-                                Hand bags
-                            </a>
-                        </li>
-                        <li >
-                            <a href="">
-                                <img class="proIcon" src="../assets/image/icon_wallet.png" alt="bag">
-                                Wallet
-                            </a>
-                        </li>
-                        <li >
-                            <a href="">
-                                <img class= "proIcon" src="../assets/image/icon_clothes.png" alt="">
-                                Clothes
-                            </a>
-                        </li>
-                    </ul>
-                </td>
-                <td class="right_path" >   
-                    <div class="productSection">
-                        <table class="productFeature">
-                            <tr>
-                                <td class="proFeatureImg">
-                                    <div class="line">
-                                        <p class="discount">20%</p>
-                                        <center>
-                                            <img id="mainImg" src="../assets/image/clothes (1).png" alt="">
-                                            <div>
-                                                <table>
-                                                    <tr class="subImg">
-                                                        <td>
-                                                            <img src="../assets/image/clothes (1).png" alt="">
-                                                        </td>
-                                                        <td>
-                                                            <img src="../assets/image/clothes (1).png" alt="">
-                                                        </td>
-                                                        <td>
-                                                            <img src="../assets/image/clothes (1).png" alt="">
-                                                        </td>
-                                                    
-                                                    </tr>
-                                                </table>
-                                                <!-- <span class="subImg"></span>
-                                                <span class="subImg"><img src="../assets/image/clothes (1).png" alt=""></span>
-                                                <span class="subImg"><img src="../assets/image/clothes (1).png" alt=""></span> -->
-                                            </div>
-                                        </center>
-                                    </div>
-                                </td>
-                               
-                                <td class="proFeatureImg2">
-                                    <p class="lastprice">$12</p>
-                                    <p class="oldprice">$15</p>
-                                    <h3 >White T-Shirt -  Nike</h3>
-                                    <p>Nike Women Pink Haft Zip Lightweight Hooded Shirt Top Athletic Stretch Size M</p>
-                                    <button ><i class="fa fa-shopping-cart"></i> Cart</button>
-                                    <div class="type_clothes">
-                                        <span class="productTag">Male T-shirt</span>
-                                        <span class="productTag">Single Color</span>
-                                    </div>
-                                    
-                                </td>
-                            </tr>
-                        </table>
-                        <h3>Comments</h3>
-                        <div class="comment_container">
-                            <div class="spacing">
-                                <table class="table-content">
-                                    <tr class="comment">
-                                        <td class="icon"><i class="fa fa-user-circle-o" style="font-size: 300%;"></i></td>
-                                        <td class="text">
-                                            <p class="user">Anonymous</p>
-                                            <p class="time">Today 4:2pm - 12.06.2020</p>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
-                                    since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five countries,
-                                    but also the leap into eloectronic typesetting, remanning essentially unchanged. 
-                                </p>
-                            </div> 
-                            <hr>  
-                            <div class="spacing" >
-                                
-                                <table class="table-content2">
-                                    <tr class="comment">
-                                        <td class="icon"><i class="fa fa-user-circle-o" style="font-size: 300%;"></i></td>
-                                        <td class="text">
-                                            <p class="user">Anonymous</p>
-                                            <p class="time">Today 4:2pm - 12.06.2020</p>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
-                                    since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five countries,
-                                    but also the leap into eloectronic typesetting, remanning essentially unchanged. 
-                                </p>
-                            </div>
+    <!-- Products Category Section -->
+    <div class="contain">
+        <div class="right-side">
+            <div class="category">
+                <ul>
+                    <li>
+                       <a href=""><img class="products-icon" src="../assets/image/icon_laptop.png" alt="">Electronics</a>
+                    </li>
+                    <li>
+                        <a href=""><img class="products-icon" src="../assets/image/icon_bag-front-view.png" alt="">Hand bags</a>
+                    </li>
+                    <li>
+                        <a href=""><img class="products-icon" src="../assets/image/icon_wallet.png" alt="">Wallet</a>
+                    </li>
+                    <li>
+                        <a href="../src/clothes-page.html"><img class="products-icon" src="../assets/image/icon_clothes.png" alt="">Clothes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="product-detail">
+            <div class="card">
+                <div class="img-path">
+                    <div class="middle-line">
+                        <div class="discount">20%</div>
+                        <div><img class="cloth" src="<%= result.img %>" alt=""></div>
+                        <div class="three-clothes">
+                            <table>
+                                <img style="height: 20vh;" src="http://localhost:3000/<%= result.img %> " alt="">
+                                <tr>
+                                    <td><img class="small-cloth" src="http://localhost:3000/<%= result.img %>" alt=""></td>
+                                    <td><img class="small-cloth"src="http://localhost:3000/<%= result.img %> " alt=""></td>
+                                    <td><img class="small-cloth"src="http://localhost:3000/<%= result.img %> " alt=""></td>
+                                </tr>
+                            </table>
+                        </div> 
+                    </div>
+                </div>
+                <div class="detail-path">
+                    <div class="header"><p class="head"><%= result.productName %></p><p class="full-price"><%= result.price %> </p><p class="dis-price"><%= result.price*0.8 %> </p> </div>
+                    <div class="txt"><%= result.detail %> </div>
+                    <button class="card-btn"><i class="fas fa-shopping-cart"></i> card</button> 
+                    <div class="tags">
+                        <span class="male-shirt">Male T-Shirt</span>&nbsp;&nbsp;
+                        <span class="male-shirt"> Single Color</span>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <h4>Comments</h4>
+            <div class="comment-contain">
+                <div class="comment">
+                    <table class="tab">
+                        <tr>
+                            <td class="icon">
+                                <i class="fas fa-user-circle" style="font-size: 200%;  "></i>
+                            </td>
+                            <td>
+                                <p class="anonymous">Anonymous</p>
+                                <p class="date">Today 4:21pm-12.06.2020</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>Lorem Ipsum is simple dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                        standarf dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to 
+                        make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettin,
+                        remaining essentially unchange.
+                    </p>
+                </div>
+                <div class="comment">
+                    <table class="tab">
+                        <tr>
+                            <td class="icon">
+                                <i class="fas fa-user-circle" style="font-size: 200%;  "></i>
+                            </td>
+                            <td>
+                                <p class="anonymous">Anonymous</p>
+                                <p class="date">Today 4:21pm-12.06.2020</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>Lorem Ipsum is simple dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                        standarf dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to 
+                        make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettin,
+                        remaining essentially unchange.
+                    </p>
+                </div>
+            </div>
+
+            <form class="review">
+                <fieldset class="boder" >
+                 <legend >Write your review here</legend>
                
-                    </div>
-                    <form class="form">
-                        <fieldset class="input">
-                          <legend>Write your commnet here</legend>
-                          
-                        </fieldset>
-                        <button class="discard"><i class="fa fa-remove"></i> Discard</button>
-                        <button class="send"><i class="fa fa-reply" aria-hidden="true"></i> Send</button>
-                      </form>
+                </fieldset>
+            </form>
+            <div class="btn-con">
+                <button class="send"><i class="fas fa-share"></i> Send</button>
+                <button class="discard"><i class="fas fa-times"></i> Discard</button>
+            </div>
+            
 
-                   
-                </td>
 
-              
-            </tr>
-        </table>
+        </div>
+    
+    
     </div>
+
+
+</body>
+</html>

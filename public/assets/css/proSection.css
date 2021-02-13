@@ -1,0 +1,104 @@
+.category a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  vertical-align: middle;
+  align-items: center;
+}
+.category li {
+  list-style: none;
+  margin-bottom: 10%;
+}
+.products-icon {
+  width: 30px;
+}
+.right-side {
+  display: grid;
+  float: left;
+  margin: 0 0 0 0;
+  width: 20%;
+}
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  background-color: rgb(240, 240, 240);
+  float: right;
+  padding-bottom: 3%;
+}
+.card {
+  width: 30%;
+  margin-left: 2%;
+  margin-top: 2%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 800px) {
+  .card {
+    width: 100%;
+    margin: 3%;
+  }
+  .right-side {
+    width: 100%;
+  }
+  .wrap {
+    width: 100%;
+    justify-content: center;
+  }
+  .contain {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+.clothes-icon {
+  display: flex;
+  width: 70%;
+  margin-left: 15%;
+  padding-top: 20%;
+}
+.contain {
+  /* display: grid; */
+  width: 100%;
+  display: flex;
+
+  /* grid-template-areas: "right-side wrap wrap "; */
+}
+.discount {
+  background-color: rgb(250, 164, 94);
+  border-radius: 5px;
+  float: right;
+  font-size: large;
+  margin-right: 30px;
+  padding: 10px;
+}
+.price {
+  color: red;
+  text-decoration: line-through;
+  margin-left: 20px;
+}
+.after-discount {
+  color: green;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.card-btn {
+  float: right;
+  background-color: white;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  outline: none;
+}
+.card-text {
+  margin: 20px;
+}
+.product-section {
+  width: 100%;
+  border: 2px solid black;
+}
+.loadmore {
+  width: 8%;
+  background-color: lightgreen;
+  padding: 5px;
+  border-radius: 25px;
+}

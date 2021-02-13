@@ -1,0 +1,183 @@
+.contain {
+  width: 100%;
+  display: flex;
+}
+.category a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  vertical-align: middle;
+  align-items: center;
+}
+.category li {
+  list-style: none;
+  margin-bottom: 10%;
+}
+.products-icon {
+  width: 30px;
+}
+.right-side {
+  display: grid;
+  float: left;
+  margin: 0 0 0 0;
+  width: 20%;
+}
+@media screen and (max-width: 800px) {
+  .right-side {
+    width: 100%;
+  }
+  .contain {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+.product-detail {
+  padding: 3%;
+  background-color: rgb(240, 240, 240);
+  width: 80%;
+}
+@media screen and (max-width: 800px) {
+  .product-detail {
+    width: 100%;
+  }
+}
+.card {
+  display: inline-block;
+  width: 100%;
+  border: 2px solid black;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: white;
+  /* margin-left: 3%;
+    margin-right:3%; */
+}
+.small-cloth {
+  width: 70%;
+  border: 3px solid lightgray;
+}
+.img-path {
+  width: 40%;
+  float: left;
+}
+.detail-path {
+  width: 58%;
+  float: right;
+}
+.txt {
+  margin-right: 3%;
+}
+.card-btn {
+  background-color: white;
+  box-shadow: 1px 2px;
+  margin-top: 20%;
+  margin-bottom: 10%;
+}
+.tags {
+  font-weight: bold;
+  color: rgb(233, 233, 233);
+}
+.male-shirt {
+  background-color: rgb(104, 103, 103);
+  padding: 2%;
+  border-radius: 10%;
+}
+.cloth {
+  width: 50%;
+}
+.discount {
+  color: white;
+  display: flex;
+  background-color: rgb(250, 164, 94);
+  border-radius: 5px;
+  margin-left: 85%;
+  font-size: 12px;
+  margin-right: 6%;
+  padding: 5px;
+}
+.middle-line {
+  display: block;
+  border-right: 2px solid lightgray;
+  /* height: 80%; */
+  margin: 0 auto;
+  text-align: center;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.head {
+  font-size: 22px;
+  /* float:left; */
+  font-weight: bold;
+  margin-right: auto;
+}
+.dis-price {
+  color: green;
+  /* float: right; */
+  margin-right: 3%;
+}
+.full-price {
+  color: red;
+  /* float: right; */
+  text-decoration: line-`ough;
+  margin-right: 3%;
+}
+.comment {
+  background-color: white;
+  border-bottom: 2px solid rgb(164, 164, 164);
+  padding-left: 2%;
+  padding-top: 2%;
+}
+.comment-contain {
+  background-color: white;
+  border: 2px solid rgb(164, 164, 164);
+}
+.anonymous {
+  color: rgb(59, 131, 255);
+  margin-left: 1%;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.date {
+  color: rgb(177, 175, 175);
+  font-size: 12px;
+  margin-left: 1%;
+  margin-top: 0;
+}
+.tab {
+  width: 100%;
+}
+.icon {
+  width: 5%;
+}
+.review {
+  background-color: white;
+  margin-top: 3%;
+}
+.border {
+  height: 50%;
+}
+.send {
+  color: white;
+  background-color: green;
+  box-shadow: 1px 2px;
+  margin-right: 2%;
+  outline: none;
+  padding: 5px;
+}
+.discard {
+  background-color: white;
+  box-shadow: 1px 2px;
+  outline: none;
+  padding: 5px;
+}
+.btn-con {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2%;
+  margin-right: 2%;
+}
+.boder {
+  height: 100px;
+}

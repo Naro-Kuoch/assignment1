@@ -1,18 +1,20 @@
 const bcrypt = require('bcryptjs');
 const User = require('../model/user');
-// const bcrypt = require('bycrypt js')
-exports.getHomePage = (req,res,next)=>{
-    res.render('homePage')
-}
+
+
+// exports.getHomePage = (req,res,next)=>{
+//     res.render('homePage')
+// }
+
 exports.signUp = (req,res)=>{
     res.render('signUp');
 }
 exports.signIn = (req,res)=>{
     res.render('signIn',{error:false});
 }
-exports.product = (req,res)=>{
-    res.render('product');
-}
+// exports.product = (req,res)=>{
+//     res.render('product');
+// }
 
 exports.register = (req,res)=>{
     console.log(req.body);

@@ -4,7 +4,30 @@ const fs = require('fs');
 // exports.manageProduct = (req,res)=>{
 //     res.render('adminPage');
 // }
+exports.getHomePage=async(req,res)=>{
+    await Product.find().then(result=>{
+        if(result){
+            console.log(result);
+            res.render('homePage',{error:false,result:result});
 
+        }else{
+            res.render('homePage',{error:false,result:false});
+        }
+    })
+    
+}
+exports.productDetail=async(req,res)=>{
+    await Product.findById(req.params.id).then(result=>{
+        if(result){
+            console.log(result);
+            res.render('product',{error:false,result:result});
+
+        }else{
+            res.render('product',{error:false,result:false});
+        }
+    })
+    
+}
 exports.manageProduct=async(req,res)=>{
     await Product.find().then(result=>{
         if(result){
@@ -20,6 +43,7 @@ exports.manageProduct=async(req,res)=>{
 exports.addProduct = (req,res)=>{
     console.log(req.body);
     const productName = req.body.productName;
+    const price = req.body.price;
     const qty = req.body.qty;
     const instock = req.body.instock;
     const category = req.body.category;
@@ -41,6 +65,7 @@ exports.addProduct = (req,res)=>{
             img.mv(productFile).then(result=>{
                 const product = new Product({
                     productName,
+                    price,
                     detail,
                     qty,
                     instock,

@@ -3,156 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Shopping</title>
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/proSection.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
 </head>
 <body>
-    <div class="background">
-        <div class="nav">
-            <a href="" id="home"><b>Awesome<span id="head">Shop</span></b></a>
-            <span class="helpJoin">
-                <button id="join">Join</button>
-                <a href="" id="help">
-                    <i class="fa fa-question-circle"></i>
-                     Need Help
-                </a>
+
+    <div class="back-ground">
+        <!-- sidebar -->
+        <div class="side-bar">
+            <a href="../src/index.html" class="logo" >Awesome<span class="shop">Shop</span></a>
+            <span class="right-path">
+                <a href="" class="help"><i class="fas fa-question-circle"></i>&nbsp;Need Help</a>
+                <!-- <button class="join"></button> -->
+                <a href="http://localhost:3000/signup" class="join">Join</a>
             </span>
-            
         </div>
-       
-        <center class="title">
-            <h1>Shop your designer dresses</h1>
-            <p class="subtitle">
-                Ready to wear your dresses tailored for you from online. Hurry up while stock lasts.
-            </p>
-            <input type="search" id="searchProduct" name="searchProduct" placeholder="&#xf002 Search your products from here">
-
-        </center>
-
+        <!-- Feature Section -->
+        <div >
+            <center><h1>Shop your designer dresses</h1></center>
+            <center><p class="text">Ready to wear dresses tailored for you from online. Hurry up while stock lasts.</p></center>
+            <div class="search-bar">
+            <!-- Search bar -->
+            <center><input class="input" type="text" placeholder="&#xF002; Search your products from here"/></center>
+           
+            </div>
+        
+        </div>
     </div>
-    <div class="promotion">
-        <table class="promotion">
-            <tr>
-                <td class="col1"> 
-                    <div class="description">
-                        <h3>Coupon Savings</h3>
-                        <p>Up to 60% off everyday essentials</p>
-                    </div>
-                   
-                   <img id="couponImg" src="../assets/image/icons8-coupon-100.png" alt="Scissors"> 
-                   <button class="buttonPromot">Shop Coupon</button>
-                </td>
-                <td class="col2">
-                    <div class="description">
-                        <h3>Free Delivery</h3>
-                        <p>With selected items</p>
-                    </div>
-                    <img id="deliverImg" src="../assets/image/checked-truck.png" alt="Truck">
-                    <button class="buttonPromot">Deliver Now</button> 
-                </td>
-                <td class="col3">
-                    <div class="description">
-                        <h3>Gift Voucher</h3>
-                        <p>With personal care items</p>
-                    </div>
-                    <img id="giftImg" src="../assets/image/gift--v1.png" alt="Gift"> 
-                    <button class="buttonPromot gift">Gift Now</button>
-                </td>
-            </tr>
-        </table>
+    <!-- Promotion Section-->
+    <div class="grid">
+        <div class="item1">
+            <div class="inner"> 
+                <h4>Coupon Saving</h4>
+                <p>Up to 60% off everyday essentials</p>
+                <button class="btn">Shop Coupons</button>
+            </div>
+            <img class="image" src="../assets/image/icons8-coupon-100.png" alt="">
+        </div>
+        <div class="item2">
+            <div class="inner">
+                <h4>Free Delivery</h4>
+                <p>With selected items</p>
+                <button class="btn">Deliver Now</button>
+            </div>
+            <img class="image" src="../assets/image/checked-truck.png" alt="">
+        </div>
+        <div class="item3">
+            <div class="inner">
+                <h4>Gift Voucher</h4>
+                <p>With personal care items</p>
+                <button class="btn">Gift Now</button>
+            </div>
+            <img class="image" src="../assets/image/gift--v1.png" alt="">
+        </div>
     </div>
-    <div class="container">
-        <table class="product">
-            <tr>
-                <td class="productCate">
-                    <ul >
-                        <li >
-                            <a href=""> 
-                                <img class="proIcon" src="../assets/image/icon_laptop.png" alt="Laptop">
-                                Electronic
-                            </a>
-                        </li>
-                        <li >
-                            <a href="">
-                                <img class="proIcon" src="../assets/image/icon_bag-front-view.png" alt="bag">
-                                Hand bags
-                            </a>
-                        </li>
-                        <li class="productCate" >
-                            <a href="">
-                                <img class="proIcon" src="../assets/image/icon_wallet.png" alt="wallet">
-                                Wallets
-                            </a>
-                        </li>
-                        <li >
-                            <a href="productPage.html">
-                                <img class= "proIcon" src="../assets/image/icon_clothes.png" alt="">
-                                Clothes
-                            </a>
-                        </li>
-                    </ul>
-                </td>
-                <td class="right_path">
-                    <table class="productFeature">
-                        <tr>
-                            <td class="proDesciption">
-                                <p class="discount">20%</p>
-                                <img src="../assets/image/clothes (1).png" alt="">
-                                <p>Nike womens pink Haft Zip Lightweight Hooded Shirt Top Athletic Stretch Size M</p>
-                                <p class="oldprice">$15</p>
-                                <p class="lastprice">$12</p>
-                                <button><i class="fa fa-shopping-cart"></i> Cart</button>
-                            </td>
-                            <td class="proDesciption">
-                                <p class="discount">20%</p>
-                                <img src="../assets/image/clothes (1).png" alt="">
-                                <p>Nike womens pink Haft Zip Lightweight Hooded Shirt Top Athletic Stretch Size M</p>
-                                <p class="oldprice">$15</p>
-                                <p class="lastprice">$12</p>
-                                <button><i class="fa fa-shopping-cart"></i> Cart</button>
-                            </td>
-                            <td class="proDesciption">
-                                <p class="discount">20%</p>
-                                <img src="../assets/image/clothes (1).png" alt="">
-                                <p>Nike womens pink Haft Zip Lightweight Hooded Shirt Top Athletic Stretch Size M</p>
-                                <p class="oldprice">$15</p>
-                                <p class="lastprice">$12</p>
-                                <button><i class="fa fa-shopping-cart"></i> Cart</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="proDesciption">
-                                <p class="discount">20%</p>
-                                <img src="../assets/image/clothes (1).png" alt="">
-                                <p>Nike womens pink Haft Zip Lightweight Hooded Shirt Top Athletic Stretch Size M</p>
-                                <p class="oldprice">$15</p>
-                                <p class="lastprice">$12</p>
-                                <button><i class="fa fa-shopping-cart"></i> Cart</button>
-                            </td>
-                            <td class="proDesciption">
-                                <p class="discount">20%</p>
-                                <img src="../assets/image/clothes (1).png" alt="">
-                                <p>Nike womens pink Haft Zip Lightweight Hooded Shirt Top Athletic Stretch Size M</p>
-                                <p class="oldprice">$15</p>
-                                <p class="lastprice">$12</p>
-                                <button><i class="fa fa-shopping-cart"></i> Cart</button>
-                            </td>
-                            <td class="proDesciption">
-                                <p class="discount">20%</p>
-                                <img src="../assets/image/clothes (1).png" alt="">
-                                <p>Nike womens pink Haft Zip Lightweight Hooded Shirt Top Athletic Stretch Size M</p>
-                                <p class="oldprice" >$15</p>
-                                <p class="lastprice" >$12</p>
-                                <button><i class="fa fa-shopping-cart"></i> Cart</button>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-    </div>
+    <!-- Products Category Section -->
+    <div class="contain">
+        <div class="right-side">
+            <div class="category">
+                <ul>
+                    <li>
+                       <a href=""><img class="products-icon" src="../assets/image/icon_laptop.png" alt="">Electronics</a>
+                    </li>
+                    <li>
+                        <a href=""><img class="products-icon" src="../assets/image/icon_bag-front-view.png" alt="">Hand bags</a>
+                    </li>
+                    <li>
+                        <a href=""><img class="products-icon" src="../assets/image/icon_wallet.png" alt="">Wallet</a>
+                    </li>
+                    <li>
+                        <a href="../src/clothes-page.html"><img class="products-icon" src="../assets/image/icon_clothes.png" alt="">Clothes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     
+        <div class="wrap">
+            <% for(var i=0; i< result.length; i++) {%> 
+                <div class="card">
+                    <p class="discount">20%</p>
+                    <img class="clothes-icon" src="<%= result[i].img %>" alt="" >
+                    <p class="card-text"><%= result[i].productName %> <%= result[i].detail %> </p>
+                    <p class="price"><%= result[i].price %></p> 
+                    
+                    <form action="/product/<%= result[i]._id %> " method="GET">
+                        <span class="after-discount"><%= result[i].price-result[i].price*0.2 %>
+                            <button class="card-btn" value="<%= result[i]._id %> ">
+                                <i class="fas fa-shopping-cart">
+
+                            </i> card</button> 
+                        </span> 
+                    </form>
+                </div>
+                <% } %>
+                <!-- <div class="card">
+                    <p class="discount">20%</p>
+                    <img class="clothes-icon" src="../assets/image/clothes (1).png" alt="">
+                    <p class="card-text">Nike Womens Pink Holf Zip Lightweight Hooded Shirt Top Athletic Stretch Sizw M</p>
+                    <p class="price">$15</p> 
+                    <span class="after-discount">$12 <button class="card-btn"><i class="fas fa-shopping-cart"></i> card</button> </span> 
+                </div>
+                
+                <div class="card">
+                    <p class="discount">20%</p>
+                    <img class="clothes-icon" src="../assets/image/clothes (1).png" alt="">
+                    <p class="card-text">Nike Womens Pink Holf Zip Lightweight Hooded Shirt Top Athletic Stretch Sizw M</p>
+                    <p class="price">$15</p> 
+                    <span class="after-discount">$12 <button class="card-btn"><i class="fas fa-shopping-cart"></i> card</button> </span> 
+                </div>
+                <div class="card">
+                    <p class="discount">20%</p>
+                    <img class="clothes-icon" src="../assets/image/clothes (1).png" alt="">
+                    <p class="card-text">Nike Womens Pink Holf Zip Lightweight Hooded Shirt Top Athletic Stretch Sizw M</p>
+                    <p class="price">$15</p> 
+                    <span class="after-discount">$12 <button class="card-btn"><i class="fas fa-shopping-cart"></i> card</button> </span> 
+                </div>
+                <div class="card">
+                    <p class="discount">20%</p>
+                    <img class="clothes-icon" src="../assets/image/clothes (1).png" alt="">
+                    <p class="card-text">Nike Womens Pink Holf Zip Lightweight Hooded Shirt Top Athletic Stretch Sizw M</p>
+                    <p class="price">$15</p> 
+                    <span class="after-discount">$12 <button class="card-btn"><i class="fas fa-shopping-cart"></i> card</button> </span> 
+                </div>
     
+                <div class="card">
+                    <p class="discount">20%</p>
+                    <img class="clothes-icon" src="../assets/image/clothes (1).png" alt="">
+                    <p class="card-text">Nike Womens Pink Holf Zip Lightweight Hooded Shirt Top Athletic Stretch Sizw M</p>
+                    <p class="price">$15</p> 
+                    <span class="after-discount">$12 <button class="card-btn"><i class="fas fa-shopping-cart"></i> card</button> </span> 
+                </div>
+                <div class="card">
+                    <p class="discount">20%</p>
+                    <img class="clothes-icon" src="../assets/image/clothes (1).png" alt="">
+                    <p class="card-text">Nike Womens Pink Holf Zip Lightweight Hooded Shirt Top Athletic Stretch Sizw M</p>
+                    <p class="price">$15</p> 
+                    <span class="after-discount">$12 <button class="card-btn"><i class="fas fa-shopping-cart"></i> card</button> </span> 
+                </div>
+                <div class="card">
+                    <p class="discount">20%</p>
+                    <img class="clothes-icon" src="../assets/image/clothes (1).png" alt="../assets/image/">
+                    <p class="card-text">Nike Womens Pink Holf Zip Lightweight Hooded Shirt Top Athletic Stretch Sizw M</p>
+                    <p class="price">$15</p> 
+                    <span class="after-discount">$12 <button class="card-btn"><i class="fas fa-shopping-cart"></i> card</button> </span> 
+                </div> -->
+        </div>
+
+        
+    </div>
+   
+        <center><p class="loadmore">Loading More</p></center>
+    
+
 </body>
 </html>
