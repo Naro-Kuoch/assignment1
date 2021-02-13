@@ -13,7 +13,7 @@ router.get('/admin',controlPro.manageProduct);
 router.post('/searchemail',control.searchEmail);
 
 router.post('/addproduct',controlPro.addProduct);
-router.post('/deleteProduct',controlPro.deleteProduct);
+router.post('/deleteProduct/:id',controlPro.deleteProduct);
 
 
 module.exports=router

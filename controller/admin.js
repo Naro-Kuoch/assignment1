@@ -51,7 +51,7 @@ exports.logIn = (req,res) =>{
         if(result){
             bcrypt.compare(pwd,result[0].password,function(err,passwordIsMatch){
                 if(passwordIsMatch){
-                    res.redirect("/product");
+                    res.redirect("/admin");
                 }else{
                     res.render("signin", {error: true,  message: "Incorrect password !"});
                 }

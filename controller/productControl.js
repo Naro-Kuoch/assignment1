@@ -49,7 +49,8 @@ exports.addProduct = (req,res)=>{
                     postedAt: new Date
                 })
                 product.save().then(result=>{
-                    console.log("product is created ")
+                    console.log("product is created ");
+                    res.redirect("/admin");
                     
                 }).catch(err=>{
                     console.log(err);
@@ -84,9 +85,9 @@ exports.deleteProduct = (req,res)=>{
     console.log(req.params.id)
     Product.findByIdAndRemove(req.params.id).then(result=>{
         fs.unlink(path+result.img);
-        res.redirect("/admin")
+        res.redirect("/admin");
     }).catch(err=>{
-        res.redirect("/admin")
+        res.redirect("/admin");
     })
 
 }
